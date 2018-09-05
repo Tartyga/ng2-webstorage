@@ -3,7 +3,7 @@ import { STORAGE } from '../enums/storage';
 export declare class WebStorageHelper {
     static store(sType: STORAGE, sKey: string, value: any, json?: boolean): void;
     static retrieve(sType: STORAGE, sKey: string): string;
-    static retrieveFromStorage(sType: STORAGE, sKey: string): any;
+    static retrieveFromStorage(sType: STORAGE, sKey: string): string;
     static refresh(sType: STORAGE, sKey: string): void;
     static refreshAll(sType: STORAGE): void;
     static clearAll(sType: STORAGE): void;
