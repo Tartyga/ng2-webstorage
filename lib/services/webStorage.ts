@@ -9,9 +9,9 @@ export class WebStorageService implements IStorage {
 		this.sType = sType;
 	}
 
-	public store(raw:string, value:any):void {
+	public store(raw:string, value:any, json?:boolean):void {
 		let sKey = KeyStorageHelper.genKey(raw);
-		WebStorageHelper.store(this.sType, sKey, value);
+		WebStorageHelper.store(this.sType, sKey, value, json);
 	}
 
 	public retrieve(raw:string):any {

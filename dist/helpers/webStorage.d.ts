@@ -1,7 +1,7 @@
 import { IWebStorage } from '../interfaces/webStorage';
 import { STORAGE } from '../enums/storage';
 export declare class WebStorageHelper {
-    static store(sType: STORAGE, sKey: string, value: any): void;
+    static store(sType: STORAGE, sKey: string, value: any, json?: boolean): void;
     static retrieve(sType: STORAGE, sKey: string): string;
     static retrieveFromStorage(sType: STORAGE, sKey: string): any;
     static refresh(sType: STORAGE, sKey: string): void;

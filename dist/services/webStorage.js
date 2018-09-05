@@ -5,9 +5,9 @@ var WebStorageService = (function () {
         this.sType = sType;
         this.sType = sType;
     }
-    WebStorageService.prototype.store = function (raw, value) {
+    WebStorageService.prototype.store = function (raw, value, json) {
         var sKey = KeyStorageHelper.genKey(raw);
-        WebStorageHelper.store(this.sType, sKey, value);
+        WebStorageHelper.store(this.sType, sKey, value, json);
     };
     WebStorageService.prototype.retrieve = function (raw) {
         var sKey = KeyStorageHelper.genKey(raw);

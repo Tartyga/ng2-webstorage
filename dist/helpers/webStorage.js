@@ -8,8 +8,9 @@ var STORAGE_AVAILABILITY = (_b = {}, _b[STORAGE.local] = null, _b[STORAGE.sessio
 var WebStorageHelper = (function () {
     function WebStorageHelper() {
     }
-    WebStorageHelper.store = function (sType, sKey, value) {
-        this.getStorage(sType).setItem(sKey, JSON.stringify(value));
+    WebStorageHelper.store = function (sType, sKey, value, json) {
+        if (json === void 0) { json = true; }
+        this.getStorage(sType).setItem(sKey, (json ? JSON.stringify(value) : value));
         CACHED[sType][sKey] = value;
         StorageObserverHelper.emit(sType, sKey, value);
     };
